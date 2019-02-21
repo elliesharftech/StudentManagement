@@ -1,17 +1,17 @@
 import java.util.*;
 
-public class StudentManagement  {
+public class StudentManagement {
 
     private ArrayList<Student> list = new ArrayList<>();
 
     public boolean hasDuplicates(Student newStudent) {
-         for(Student student: list) {
-             if (student.name.equals(newStudent.name)) {
-               return true;
-             }
-         }
-         return false;
-     }
+        for (Student student : list) {
+            if (student.name.equals(newStudent.name)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public boolean addStudent(Student student) {
         // TODO: Check if list contains similar student.
@@ -24,11 +24,21 @@ public class StudentManagement  {
         return true;
     }
 
+    public void updateStudentName(Student student, String newName) {
+        list.set(list.indexOf(student.name), newName);
+        }
 
-    public void printStudents() {
+
+    public void printStudents () {
         for (Student x : list) {
             System.out.println("student name is: " + x.getName());
         }
+    }
+
+    public void deleteStudent (Student student){
+        list.remove(student);
+
+
 
     }
 }
