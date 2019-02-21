@@ -10,5 +10,11 @@ public class Test {
         test.addStudent(student1);
         test.addStudent(student2);
         test.printStudents();
+        test.deleteStudent(student1);
+        System.out.println("==================List of student after deletion ================");
+        test.printStudents();
+        test.updateStudentName("dan", "DANIL");
+        test.printStudents();
+
     }
 }
